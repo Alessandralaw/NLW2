@@ -112,13 +112,13 @@
               <select name="weekday[]" required>
 
                 <option value="">Selecione uma opção</option>
-                <option value="1">Domingo</option>
-                <option value="2">Segunda-feira</option>
-                <option value="3">Terca-feira</option>
-                <option value="4">Quarta-feira</option>
-                <option value="5">Quinta-feira</option>
-                <option value="5">Sexta-feira</option>
-                <option value="5">Sabado</option>
+
+                {% for weekday in weekdays %}
+                  <option value="{{  loop.index0 }}">
+                    {{ weekday }}
+                  </option>
+                {% endfor %}
+
 
               </select>
               </div>
