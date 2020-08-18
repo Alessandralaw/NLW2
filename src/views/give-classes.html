@@ -46,7 +46,7 @@
 
     <main>
 
-      <form action="/save-classes" id="create-class" method="POST">
+      <form action="" id="create-class">
         <fieldset>
     
           <legend>Seus dados</legend>
@@ -87,7 +87,7 @@
                 <option value="{{loop.index}}">
                   {{ subject }}
                 </option>
-              {% endfor %}
+              {%endfor%}
 
             </select>
           </div>
@@ -96,7 +96,7 @@
             <label for="cost">Custo da sua hora/aula 
               <small>(R$)</small>
             </label>
-            <input name="cost" id="cost" type="number">
+            <input name="cost" type="cost" id="cost" type="number">
           </div>
         </fieldset>
 
@@ -114,10 +114,10 @@
                 <option value="">Selecione uma opção</option>
 
                 {% for weekday in weekdays %}
-                  <option value="{{  loop.index0 }}">
-                    {{ weekday }}
+                  <option value="{{loop.index0}}">
+                    {{weekday}}
                   </option>
-                {% endfor %}
+                {%endfor%}
 
 
               </select>
